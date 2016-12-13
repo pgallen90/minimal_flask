@@ -1,0 +1,1 @@
+web: gunicorn flaskapp.app:create_app\(\)
