@@ -1,21 +1,21 @@
-## Quickstart
+# {{cookiecutter.human_name}}
 
-TODO:
-- https://github.com/kennethreitz/autoenv
-- Factor out base runner into
+{{cookiecutter.description}}
+
+## Dependencies:
+1. https://github.com/kennethreitz/autoenv
+2. Install requrements
+    ```python
+    	virtualenv venv -p python
+    	. venv/bin/activate
+    	pip install -r requirements.txt
+    	
+    	# Start the server:
+    	flask server
+    ```
 
 
-LAUNCHING:
-export FLASK_APP=./flaskapp/autoapp.py
-export FLASK_DEBUG=1
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
 
 
-
-```python
-	virtualenv venv -p python
-	. venv/bin/activate
-	pip install -r requirements.txt
-	
-	# Start the server:
-	python app.py runserver 
-```
+curl -F 'login=username' -F 'token=API Token' https://github.com/api/v2/yaml/repos/create -F name=reponame

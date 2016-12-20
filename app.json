@@ -1,0 +1,5 @@
+{
+  "name": "{{cookiecutter.human_name}}",
+  "description": "{{cookiecutter.description}}",
+  "repository": "https://github.com/{{cookiecutter.github_user}}/{{app_slug}}",
+}
