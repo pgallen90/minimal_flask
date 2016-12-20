@@ -15,12 +15,12 @@ class RootConfig(object):
 class ProdConfig(RootConfig):
     """Production configuration."""
     ENVIRONMENT = 'prod'
-    # SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = os.environ.get("SECRET_KEY")
     SERVER_NAME = 'testing.patrickgallen.com'
 
 
 class DevConfig(RootConfig):
     """Production configuration."""
     ENVIRONMENT = 'dev'
-    # SECRET_KEY = 'A SECRET'
+    SECRET_KEY = 'A SECRET'
     SERVER_NAME = 'streak.local:5000'

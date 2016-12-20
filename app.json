@@ -2,4 +2,16 @@
   "name": "{{cookiecutter.human_name}}",
   "description": "{{cookiecutter.description}}",
   "repository": "https://github.com/{{cookiecutter.github_user}}/{{app_slug}}",
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "formation": {
+    "web": {
+      "quantity": 1,
+      "size": "free"
+    }
+  }
 }
