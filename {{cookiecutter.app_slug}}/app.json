@@ -1,11 +1,15 @@
 {
   "name": "{{cookiecutter.human_name}}",
   "description": "{{cookiecutter.description}}",
-  "repository": "https://github.com/{{cookiecutter.github_user}}/{{app_slug}}",
+  "repository": "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.app_slug}}",
   "env": {
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
+    }, 
+    "SERVER_NAME": {
+      "description": "The root domain name",
+      "value": "{{cookiecutter.server_name}}"
     }
   },
   "formation": {

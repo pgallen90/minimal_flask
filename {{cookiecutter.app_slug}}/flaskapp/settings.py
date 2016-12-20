@@ -16,7 +16,7 @@ class ProdConfig(RootConfig):
     """Production configuration."""
     ENVIRONMENT = 'prod'
     SECRET_KEY = os.environ.get("SECRET_KEY")
-    SERVER_NAME = 'testing.patrickgallen.com'
+    SERVER_NAME = os.environ.get("SERVER_NAME")
 
 
 class DevConfig(RootConfig):
