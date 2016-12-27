@@ -1,3 +1,10 @@
-# Minimal Flask
+# Minimal Flask cookiecutter
 
-Very much still a work in progress. Idea is to get to a fully-functioning webapp in as few LOC of possible.
+Based off https://github.com/sloria/cookiecutter-flask except with less stuff.
+
+
+## Quickstart
+```bash
+$ pip install cookiecutter
+$ cookiecutter https://github.com/pgallen90/minimal_flask
+```

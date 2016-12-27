@@ -3,17 +3,15 @@
 {{cookiecutter.description}}
 
 ## Dependencies:
-1. https://github.com/kennethreitz/autoenv
-    2. Ensure environment variables are set (see .env)
-2. Install requrements
-    ```python
-        virtualenv venv -p python3
-        . venv/bin/activate
-        pip install -r requirements.txt
-        
-        # Start the server:
-        flask server
-    ```
+1. Set up environment variables (see /.env)
+    2. [Use Autoenv](https://github.com/kennethreitz/autoenv)
+    2. Or do it manually ```export VAR="foo"```
 
 
+## Running the server & scripts:
+ * Using Factory Functions best practices based on the [Flask CLI guide](http://flask.pocoo.org/docs/0.12/cli/#factory-functions)
+ * 
+
+## Deployment to Heroku
+This is a shortcut to deploy the app to Heroku from 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.app_slug}})
