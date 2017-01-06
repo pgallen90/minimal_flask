@@ -10,7 +10,11 @@
 
 ## Running the server & scripts:
  * Using Factory Functions best practices based on the [Flask CLI guide](http://flask.pocoo.org/docs/0.12/cli/#factory-functions)
- * 
+
+## Setup Database
+* flask db init
+* flask db migrate
+* flask db upgrade
 
 ## Deployment to Heroku
 This is a shortcut to deploy the app to Heroku from 
