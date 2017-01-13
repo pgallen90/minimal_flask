@@ -37,7 +37,7 @@ def register_commands(app):
     """Register Click commands."""
     app.cli.add_command(commands.clock)
 
-def create_app(config_object=DevConfig):
+def create_app(config_object=ProdConfig):
     app = Flask(__name__)
     app.config.from_object(config_object)
 
