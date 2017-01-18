@@ -13,6 +13,18 @@ from flaskapp import commands
 from flaskapp.settings import DevConfig, ProdConfig
 
 
+
+
+# UNTESTED: From https://www.youtube.com/watch?v=1ByQhAM5c1I
+from werkzeug.utils import find_modules, import_string
+
+def register_blueprints(app):
+    for name in find_modules('flaskapp.blueprints'):
+        mod = import_string(name)
+        if hasattr(mod, 'blueprint'):
+            app.register_blueprint(mod.blueprint)
+    
+# Replace this
 def load_blueprints_from_path(app, packages_path='./flaskapp/blueprints'):
     blueprints = []
     for name in os.listdir(packages_path):
@@ -44,7 +56,7 @@ def create_app(config_object=ProdConfig):
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    load_blueprints_from_path(app)
+    register_blueprints(app)
 
     register_commands(app)
 
