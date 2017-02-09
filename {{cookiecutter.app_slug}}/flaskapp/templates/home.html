@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>COLUMNA</th>
+      <th>COLUMNB</th>
+    </tr>
+  </thead>
+  <tbody>
+
+  {% for row in [] %}
+    <tr>
+      <td>{{row.id}}</td>
+      <td>{{row.date.strftime("%A (%b %d)")}}</td>
+    </tr>
+  {% endfor %}
+
+  </tbody>
+</table>
+
+{% endblock %}
