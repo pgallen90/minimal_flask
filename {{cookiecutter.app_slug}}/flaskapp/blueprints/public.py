@@ -9,4 +9,4 @@ blueprint = Blueprint('public', __name__)
 
 @blueprint.route('/')
 def home():
-	return "Home"
+	return make_response(render_template('home.html'))
