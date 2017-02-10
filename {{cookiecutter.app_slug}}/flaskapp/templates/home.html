@@ -1,5 +1,8 @@
-{{ {% extends "_base.html" %} }}
-{{ {% block body %} }}
+{% raw %}
+
+{% extends "base.html" %}
+{% block body %}
+
 
 
 <table class="table table-striped">
@@ -11,14 +14,16 @@
   </thead>
   <tbody>
 
-  {{ {% for row in [] %} }}
+  {% for row in [] %}
     <tr>
-      <td>{{ {{row.id}}</td>
-      <td>{{ {{row.date.strftime("%A (%b %d)")}} }}</td>
+      <td>{{row.id}}</td>
+      <td>{{row.date.strftime("%A (%b %d)")}}</td>
     </tr>
-  {{ {% endfor %} }}
+  {% endfor %}
 
   </tbody>
 </table>
 
-{{ {% endblock %} }}
+{% endblock %}
+
+{% endraw %}
