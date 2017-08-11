@@ -14,6 +14,7 @@ from flaskapp.settings import Config
 
 # UNTESTED: From https://www.youtube.com/watch?v=1ByQhAM5c1I
 from werkzeug.utils import find_modules, import_string
+from fuser import Fuser
 
 def register_blueprints(app):
     for name in find_modules('flaskapp.blueprints'):
@@ -45,7 +46,7 @@ def load_blueprints_from_path(app, packages_path='./flaskapp/blueprints'):
 
 def register_commands(app):
     """Register Click commands."""
-    app.cli.add_command(commands.clock)
+    app.cli.add_command(commands.seed)
 
 
 def create_app(config_object=Config):
@@ -61,7 +62,7 @@ def create_app(config_object=Config):
     register_blueprints(app)
     register_commands(app)
 
-    from bootstrap_macros import BootstrapMacros
-    BootstrapMacros(app)
+    # from bootstrap_macros import BootstrapMacros
+    # BootstrapMacros(app)
 
     return app

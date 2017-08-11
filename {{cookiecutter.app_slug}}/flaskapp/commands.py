@@ -20,7 +20,7 @@ def seed():
     from flaskapp.extensions import db
 
     # Setup a user
-    new_user = User(nickname='Root Admin')
+    new_user = User(name='Root Admin')
     new_user.email = 'patrickgallen@gmail.com'
     new_user.is_admin = True
     new_user.set_password('weakpass')

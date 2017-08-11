@@ -11,7 +11,7 @@ class Config(object):
     SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'db_repository')
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     
-    APP_NAME = '{{cookiecutter.app_slug}}'
+    APP_NAME = "{{cookiecutter.app_slug}}"
 
     ENVIRONMENT = os.environ.get("ENVIRONMENT")
     SECRET_KEY = os.environ.get("SECRET_KEY")
