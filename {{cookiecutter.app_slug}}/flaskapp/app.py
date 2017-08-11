@@ -62,7 +62,7 @@ def create_app(config_object=Config):
     register_blueprints(app)
     register_commands(app)
 
-    # from bootstrap_macros import BootstrapMacros
-    # BootstrapMacros(app)
+    from bootstrap_macros import BootstrapMacros
+    BootstrapMacros(app)
 
     return app
