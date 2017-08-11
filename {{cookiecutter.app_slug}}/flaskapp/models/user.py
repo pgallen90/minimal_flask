@@ -1,9 +1,11 @@
 from flaskapp.extensions import db
-from pga.basemodel import BaseModelMixin
+from fuser.user_mixin import UserMixin
 from sqlalchemy import ForeignKey
+from sqlalchemy.orm import relationship, backref
 
 
-class Category(db.Model, BaseModelMixin):
+class User(db.Model, UserMixin):
+    # __tablename__ = 'user'
     name = db.Column(db.Text(), nullable=False, unique=True)
 
 	# Example relationships    
