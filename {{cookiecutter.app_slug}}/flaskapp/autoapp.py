@@ -2,8 +2,6 @@
 from flask.helpers import get_debug_flag
 
 from flaskapp.app import create_app
-from flaskapp.settings import DevConfig, ProdConfig
+from flaskapp.settings import Config
 
-CONFIG = DevConfig if get_debug_flag() else ProdConfig
-
-app = create_app(CONFIG)
+app = create_app(Config)

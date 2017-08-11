@@ -10,10 +10,7 @@ from importlib import import_module
 from flask.blueprints import Blueprint
 
 from flaskapp import commands
-from flaskapp.settings import DevConfig, ProdConfig
-
-
-
+from flaskapp.settings import Config
 
 # UNTESTED: From https://www.youtube.com/watch?v=1ByQhAM5c1I
 from werkzeug.utils import find_modules, import_string
@@ -45,20 +42,26 @@ def load_blueprints_from_path(app, packages_path='./flaskapp/blueprints'):
 
     return blueprints
 
+
 def register_commands(app):
     """Register Click commands."""
     app.cli.add_command(commands.clock)
 
-def create_app(config_object=ProdConfig):
+
+def create_app(config_object=Config):
     app = Flask(__name__)
     app.config.from_object(config_object)
 
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    register_blueprints(app)
+    from flaskapp.models.user import User
+    fuser = Fuser(app)
 
+    register_blueprints(app)
     register_commands(app)
 
-    return app
+    from bootstrap_macros import BootstrapMacros
+    BootstrapMacros(app)
 
+    return app
