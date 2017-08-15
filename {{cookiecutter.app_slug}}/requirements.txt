@@ -26,3 +26,5 @@ Werkzeug==0.11.11
 WTForms==2.1
 bootstraps==1.0
 fuser==1.0
+Flask-Twilio==0.0.1
+Flask-SendGrid==0.5.2
