@@ -1,5 +1,5 @@
 {
-  "name": "{{cookiecutter.human_name}}",
+  "name": "{{cookiecutter.app_slug}}",
   "description": "{{cookiecutter.description}}",
   "repository": "https://github.com/{{cookiecutter.github_user}}/{{cookiecutter.app_slug}}",
   "env": {

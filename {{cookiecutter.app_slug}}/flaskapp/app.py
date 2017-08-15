@@ -14,7 +14,6 @@ from flaskapp.settings import Config
 
 # UNTESTED: From https://www.youtube.com/watch?v=1ByQhAM5c1I
 from werkzeug.utils import find_modules, import_string
-from fuser import Fuser
 
 def register_blueprints(app):
     for name in find_modules('flaskapp.blueprints'):
@@ -56,8 +55,8 @@ def create_app(config_object=Config):
     db.init_app(app)
     migrate = Migrate(app, db)
 
-    from flaskapp.models.user import User
-    fuser = Fuser(app)
+    import fuser
+    fuser = fuser.Fuser(app)
 
     register_blueprints(app)
     register_commands(app)
