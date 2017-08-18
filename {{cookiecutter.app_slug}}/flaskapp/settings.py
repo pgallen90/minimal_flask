@@ -14,7 +14,7 @@ class Config(object):
     APP_NAME = "{{cookiecutter.app_slug}}"
 
     ENVIRONMENT = os.environ.get("ENVIRONMENT")
-    SECRET_KEY = os.environ.get("SECRET_KEY")
+    SECRET_KEY = os.environ.get("SECRET_TOKEN")
     SERVER_NAME = os.environ.get("SERVER_NAME")
 
     SENDGRID_DEFAULT_FROM = os.environ.get("SENDGRID_DEFAULT_FROM")
