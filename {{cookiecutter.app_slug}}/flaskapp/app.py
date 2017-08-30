@@ -63,5 +63,7 @@ def create_app(config_object=Config):
 
     import bootstraps
     bootstraps.BootstrapMacros(app)
+    
+    from .models.user import User
 
     return app
